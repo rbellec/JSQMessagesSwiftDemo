@@ -134,9 +134,9 @@
 				64A4CD0E1B834652004A4AF5 /* Images.xcassets */,
 				64A4CD101B834652004A4AF5 /* LaunchScreen.xib */,
 				64A4CD051B834652004A4AF5 /* Supporting Files */,
+				64A4CD2A1B834FB8004A4AF5 /* TableViewController.h */,
 				64A4CD281B834F72004A4AF5 /* TableViewController.m */,
 				64A4CD271B834F72004A4AF5 /* JSQMessagesSwiftDemo-Bridging-Header.h */,
-				64A4CD2A1B834FB8004A4AF5 /* TableViewController.h */,
 				64A4CD2B1B835006004A4AF5 /* JSQDemoViewControllerDelegate.h */,
 			);
 			path = JSQMessagesSwiftDemo;
