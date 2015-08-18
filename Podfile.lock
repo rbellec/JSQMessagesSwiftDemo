@@ -4,18 +4,7 @@ PODS:
   - JSQSystemSoundPlayer (2.0.1)
 
 DEPENDENCIES:
-  - JSQMessagesViewController (from `https://github.com/jessesquires/JSQMessagesViewController.git`,
-    branch `develop`)
-
-EXTERNAL SOURCES:
-  JSQMessagesViewController:
-    :branch: develop
-    :git: https://github.com/jessesquires/JSQMessagesViewController.git
-
-CHECKOUT OPTIONS:
-  JSQMessagesViewController:
-    :commit: f8cbc84e0fe5af07c2ca433b4b42f2bfa115d0fe
-    :git: https://github.com/jessesquires/JSQMessagesViewController.git
+  - JSQMessagesViewController
 
 SPEC CHECKSUMS:
   JSQMessagesViewController: ca11f86fa68ca70835f05e169df9244147c1dc40
