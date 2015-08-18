@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		643B5DC21B83946100F4693C /* DemoSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643B5DC11B83946100F4693C /* DemoSettingsViewController.swift */; };
+		643B5DC61B83A97500F4693C /* DemoUsersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643B5DC51B83A97500F4693C /* DemoUsersData.swift */; };
 		64A4CD081B834652004A4AF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A4CD071B834652004A4AF5 /* AppDelegate.swift */; };
 		64A4CD0D1B834652004A4AF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A4CD0B1B834652004A4AF5 /* Main.storyboard */; };
 		64A4CD0F1B834652004A4AF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A4CD0E1B834652004A4AF5 /* Images.xcassets */; };
@@ -37,6 +38,7 @@
 		20FD30C02903B0AD85C2BAA4 /* Pods-JSQMessagesSwiftDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSQMessagesSwiftDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JSQMessagesSwiftDemoTests/Pods-JSQMessagesSwiftDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		47535CDD4E891EE4B4575F9D /* Pods_JSQMessagesSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSQMessagesSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		643B5DC11B83946100F4693C /* DemoSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoSettingsViewController.swift; sourceTree = "<group>"; };
+		643B5DC51B83A97500F4693C /* DemoUsersData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoUsersData.swift; sourceTree = "<group>"; };
 		64A4CD021B834652004A4AF5 /* JSQMessagesSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSQMessagesSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A4CD061B834652004A4AF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64A4CD071B834652004A4AF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		643B5DC31B83A8F100F4693C /* ChatScreen */ = {
+			isa = PBXGroup;
+			children = (
+				64A4CD2C1B83537F004A4AF5 /* DemoMessagesViewController.swift */,
+				64A4CD2E1B83825D004A4AF5 /* DemoModelData.swift */,
+				643B5DC51B83A97500F4693C /* DemoUsersData.swift */,
+			);
+			name = ChatScreen;
+			sourceTree = "<group>";
+		};
+		643B5DC41B83A93B00F4693C /* ApplicationSettings */ = {
+			isa = PBXGroup;
+			children = (
+				643B5DC11B83946100F4693C /* DemoSettingsViewController.swift */,
+				64A4CD301B838DB1004A4AF5 /* NSUserDefaults+DemoSettings.h */,
+				64A4CD311B838DB1004A4AF5 /* NSUserDefaults+DemoSettings.m */,
+			);
+			name = ApplicationSettings;
+			sourceTree = "<group>";
+		};
 		64A4CCF91B834652004A4AF5 = {
 			isa = PBXGroup;
 			children = (
@@ -121,11 +143,8 @@
 		64A4CD041B834652004A4AF5 /* JSQMessagesSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
-				64A4CD301B838DB1004A4AF5 /* NSUserDefaults+DemoSettings.h */,
-				64A4CD311B838DB1004A4AF5 /* NSUserDefaults+DemoSettings.m */,
-				64A4CD2C1B83537F004A4AF5 /* DemoMessagesViewController.swift */,
-				643B5DC11B83946100F4693C /* DemoSettingsViewController.swift */,
-				64A4CD2E1B83825D004A4AF5 /* DemoModelData.swift */,
+				643B5DC41B83A93B00F4693C /* ApplicationSettings */,
+				643B5DC31B83A8F100F4693C /* ChatScreen */,
 				64A4CD071B834652004A4AF5 /* AppDelegate.swift */,
 				64A4CD0B1B834652004A4AF5 /* Main.storyboard */,
 				64A4CD0E1B834652004A4AF5 /* Images.xcassets */,
@@ -365,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64A4CD2F1B83825D004A4AF5 /* DemoModelData.swift in Sources */,
+				643B5DC61B83A97500F4693C /* DemoUsersData.swift in Sources */,
 				643B5DC21B83946100F4693C /* DemoSettingsViewController.swift in Sources */,
 				64A4CD291B834F72004A4AF5 /* TableViewController.m in Sources */,
 				64A4CD2D1B83537F004A4AF5 /* DemoMessagesViewController.swift in Sources */,
