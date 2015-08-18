@@ -4,3 +4,4 @@
 
 #import <JSQMessagesViewController/JSQMessages.h>
 #import "JSQDemoViewControllerDelegate.h"
+#import "NSUserDefaults+DemoSettings.h"

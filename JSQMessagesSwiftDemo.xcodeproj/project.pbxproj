@@ -16,6 +16,7 @@
 		64A4CD291B834F72004A4AF5 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A4CD281B834F72004A4AF5 /* TableViewController.m */; };
 		64A4CD2D1B83537F004A4AF5 /* DemoMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A4CD2C1B83537F004A4AF5 /* DemoMessagesViewController.swift */; };
 		64A4CD2F1B83825D004A4AF5 /* DemoModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A4CD2E1B83825D004A4AF5 /* DemoModelData.swift */; };
+		64A4CD321B838DB1004A4AF5 /* NSUserDefaults+DemoSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A4CD311B838DB1004A4AF5 /* NSUserDefaults+DemoSettings.m */; };
 		66C6FA5D383DCA13CC11F490 /* Pods_JSQMessagesSwiftDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F139CE5F01CAD8A1179CD155 /* Pods_JSQMessagesSwiftDemoTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D2824224785A72B8B10FEDDA /* Pods_JSQMessagesSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47535CDD4E891EE4B4575F9D /* Pods_JSQMessagesSwiftDemo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -51,6 +52,8 @@
 		64A4CD2B1B835006004A4AF5 /* JSQDemoViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSQDemoViewControllerDelegate.h; sourceTree = "<group>"; };
 		64A4CD2C1B83537F004A4AF5 /* DemoMessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoMessagesViewController.swift; sourceTree = "<group>"; };
 		64A4CD2E1B83825D004A4AF5 /* DemoModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoModelData.swift; path = ../DemoModelData.swift; sourceTree = "<group>"; };
+		64A4CD301B838DB1004A4AF5 /* NSUserDefaults+DemoSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+DemoSettings.h"; sourceTree = "<group>"; };
+		64A4CD311B838DB1004A4AF5 /* NSUserDefaults+DemoSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+DemoSettings.m"; sourceTree = "<group>"; };
 		D7878618AD153317E9DA31A4 /* Pods-JSQMessagesSwiftDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSQMessagesSwiftDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JSQMessagesSwiftDemoTests/Pods-JSQMessagesSwiftDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F139CE5F01CAD8A1179CD155 /* Pods_JSQMessagesSwiftDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSQMessagesSwiftDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -118,6 +121,8 @@
 		64A4CD041B834652004A4AF5 /* JSQMessagesSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				64A4CD301B838DB1004A4AF5 /* NSUserDefaults+DemoSettings.h */,
+				64A4CD311B838DB1004A4AF5 /* NSUserDefaults+DemoSettings.m */,
 				64A4CD2E1B83825D004A4AF5 /* DemoModelData.swift */,
 				64A4CD071B834652004A4AF5 /* AppDelegate.swift */,
 				64A4CD091B834652004A4AF5 /* ViewController.swift */,
@@ -363,6 +368,7 @@
 				64A4CD291B834F72004A4AF5 /* TableViewController.m in Sources */,
 				64A4CD2D1B83537F004A4AF5 /* DemoMessagesViewController.swift in Sources */,
 				64A4CD081B834652004A4AF5 /* AppDelegate.swift in Sources */,
+				64A4CD321B838DB1004A4AF5 /* NSUserDefaults+DemoSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
