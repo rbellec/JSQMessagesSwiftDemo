@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="JRd-Be-psV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="JRd-Be-psV">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
@@ -47,7 +46,7 @@
         <!--Settings-->
         <scene sceneID="6rZ-ao-qyI">
             <objects>
-                <tableViewController id="y7K-ZU-Xs9" customClass="DemoSettingsViewController" customModule="JSQMessages" sceneMemberID="viewController">
+                <tableViewController id="y7K-ZU-Xs9" customClass="DemoSettingsViewController" customModule="JSQMessagesSwiftDemo" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="GY5-ob-knb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -295,7 +294,7 @@
         <!--Demo Messages View Controller-->
         <scene sceneID="gOX-cv-CuN">
             <objects>
-                <viewController storyboardIdentifier="DemoVC" id="JdJ-0X-ZL8" customClass="DemoMessagesViewController" customModule="JSQMessages" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DemoVC" id="JdJ-0X-ZL8" customClass="DemoMessagesViewController" customModule="JSQMessagesSwiftDemo" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TE8-r2-pE8"/>
                         <viewControllerLayoutGuide type="bottom" id="H2n-HB-Ssl"/>
@@ -329,7 +328,7 @@
         <!--Demo Messages View Controller-->
         <scene sceneID="Rr5-W8-Xyh">
             <objects>
-                <viewController id="2Qx-iu-03V" customClass="DemoMessagesViewController" customModule="JSQMessages" sceneMemberID="viewController">
+                <viewController id="2Qx-iu-03V" customClass="DemoMessagesViewController" customModule="JSQMessagesSwiftDemo" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hTc-sT-can"/>
                         <viewControllerLayoutGuide type="bottom" id="BPF-eU-3uQ"/>
