@@ -13,6 +13,7 @@
 		64A4CD0F1B834652004A4AF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A4CD0E1B834652004A4AF5 /* Images.xcassets */; };
 		64A4CD121B834652004A4AF5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64A4CD101B834652004A4AF5 /* LaunchScreen.xib */; };
 		64A4CD1E1B834652004A4AF5 /* JSQMessagesSwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A4CD1D1B834652004A4AF5 /* JSQMessagesSwiftDemoTests.swift */; };
+		64A4CD291B834F72004A4AF5 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A4CD281B834F72004A4AF5 /* TableViewController.m */; };
 		66C6FA5D383DCA13CC11F490 /* Pods_JSQMessagesSwiftDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F139CE5F01CAD8A1179CD155 /* Pods_JSQMessagesSwiftDemoTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D2824224785A72B8B10FEDDA /* Pods_JSQMessagesSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47535CDD4E891EE4B4575F9D /* Pods_JSQMessagesSwiftDemo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -42,6 +43,10 @@
 		64A4CD171B834652004A4AF5 /* JSQMessagesSwiftDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSQMessagesSwiftDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A4CD1C1B834652004A4AF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64A4CD1D1B834652004A4AF5 /* JSQMessagesSwiftDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSQMessagesSwiftDemoTests.swift; sourceTree = "<group>"; };
+		64A4CD271B834F72004A4AF5 /* JSQMessagesSwiftDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSQMessagesSwiftDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		64A4CD281B834F72004A4AF5 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		64A4CD2A1B834FB8004A4AF5 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		64A4CD2B1B835006004A4AF5 /* JSQDemoViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSQDemoViewControllerDelegate.h; sourceTree = "<group>"; };
 		D7878618AD153317E9DA31A4 /* Pods-JSQMessagesSwiftDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSQMessagesSwiftDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JSQMessagesSwiftDemoTests/Pods-JSQMessagesSwiftDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F139CE5F01CAD8A1179CD155 /* Pods_JSQMessagesSwiftDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSQMessagesSwiftDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -115,6 +120,10 @@
 				64A4CD0E1B834652004A4AF5 /* Images.xcassets */,
 				64A4CD101B834652004A4AF5 /* LaunchScreen.xib */,
 				64A4CD051B834652004A4AF5 /* Supporting Files */,
+				64A4CD281B834F72004A4AF5 /* TableViewController.m */,
+				64A4CD271B834F72004A4AF5 /* JSQMessagesSwiftDemo-Bridging-Header.h */,
+				64A4CD2A1B834FB8004A4AF5 /* TableViewController.h */,
+				64A4CD2B1B835006004A4AF5 /* JSQDemoViewControllerDelegate.h */,
 			);
 			path = JSQMessagesSwiftDemo;
 			sourceTree = "<group>";
@@ -344,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64A4CD0A1B834652004A4AF5 /* ViewController.swift in Sources */,
+				64A4CD291B834F72004A4AF5 /* TableViewController.m in Sources */,
 				64A4CD081B834652004A4AF5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,9 +484,12 @@
 			baseConfigurationReference = 064C8469D27F99B7F9F8DBE9 /* Pods-JSQMessagesSwiftDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = JSQMessagesSwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JSQMessagesSwiftDemo/JSQMessagesSwiftDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -485,9 +498,11 @@
 			baseConfigurationReference = 13367A5FD05311C8AC3A4B97 /* Pods-JSQMessagesSwiftDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = JSQMessagesSwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JSQMessagesSwiftDemo/JSQMessagesSwiftDemo-Bridging-Header.h";
 			};
 			name = Release;
 		};
