@@ -9,7 +9,7 @@
 import Foundation
 
 
-enum DemoUsersData {
+enum DemoUsersData : String {
 //    let kJSQDemoAvatarDisplayNameSquires    =
 //    let kJSQDemoAvatarDisplayNameCook       =
 //    let kJSQDemoAvatarDisplayNameJobs       = 
@@ -20,7 +20,10 @@ enum DemoUsersData {
 //    let kJSQDemoAvatarIdJobs                =
 //    let kJSQDemoAvatarIdWoz                 =
     
-    case Squires, Cook, Jobs, Woz
+    case Squires    = "053496-4509-289"
+    case Cook       = "468-768355-23123"
+    case Jobs       = "707-8956784-57"
+    case Woz        = "309-41802-93823"
     
     func displayName() -> String {
         switch self{
@@ -32,15 +35,12 @@ enum DemoUsersData {
     }
     
     func stringId() -> String {
-        switch self{
-        case .Cook:     return "468-768355-23123"
-        case .Jobs:     return "707-8956784-57"
-        case .Squires:  return "053496-4509-289"
-        case .Woz:      return "309-41802-93823"
-        }
-        
+        return self.rawValue
     }
     
-    
+    // return an Array of all possible recipients
+    static func recipients() -> [DemoUsersData] {
+        return [.Cook, .Jobs, .Woz]
+    }
     
 }

@@ -18,6 +18,7 @@ class DemoMessagesViewController : JSQMessagesViewController, UIActionSheetDeleg
     
     var  delegateModal  : JSQDemoViewControllerDelegate?
     var  demoData       : DemoModelData!
+    let  sender         : DemoUsersData = DemoUsersData.Squires
     
     
     // ----------------------------------------------------------------------
@@ -35,8 +36,8 @@ class DemoMessagesViewController : JSQMessagesViewController, UIActionSheetDeleg
         self.demoData           = DemoModelData()
         
         // You MUST set your senderId and display name
-        self.senderId           = demoData.kJSQDemoAvatarIdSquires
-        self.senderDisplayName  = demoData.kJSQDemoAvatarDisplayNameSquires
+        self.senderId           = sender.stringId()
+        self.senderDisplayName  = sender.displayName()
         
         
         // You can set custom avatar sizes
@@ -140,9 +141,9 @@ class DemoMessagesViewController : JSQMessagesViewController, UIActionSheetDeleg
         if let lastMessageOk  =  lastMessage {
             copyMessage = lastMessageOk.copy() as! JSQMessage
         } else {
-            copyMessage = JSQMessage(senderId: demoData?.kJSQDemoAvatarIdJobs,
-                displayName: demoData?.kJSQDemoAvatarDisplayNameJobs,
-                text: "First received!")
+            copyMessage = JSQMessage(senderId: DemoUsersData.Jobs.stringId(),
+                                  displayName: DemoUsersData.Jobs.displayName(),
+                                         text: "First received!")
         }
         
         /**
@@ -155,10 +156,10 @@ class DemoMessagesViewController : JSQMessagesViewController, UIActionSheetDeleg
             {
                 
                 // Remove the current user from Array of possible recipients of the message.
-                var otherUserIds            = self.demoData.users.keys.array.filter( {$0 != self.senderId;} )
+                var otherUserIds            = DemoUsersData.recipients()
                 let randomUserIndex         = Int(arc4random_uniform(UInt32(otherUserIds.count)))
-                let randomUserId            = otherUserIds[ randomUserIndex ]
-                let userDisplayedName       = self.demoData.users[randomUserId]
+                let randomUser              = otherUserIds[ randomUserIndex ]
+
                 
                 
                 var newMessage              : JSQMessage?
@@ -214,14 +215,14 @@ class DemoMessagesViewController : JSQMessagesViewController, UIActionSheetDeleg
                         NSLog("%s error: unrecognized media item, line :%s", __FUNCTION__, __LINE__)
                     }
                     
-                    newMessage = JSQMessage( senderId: randomUserId,   displayName: userDisplayedName,    media: newMediaData)
+                    newMessage = JSQMessage( senderId: randomUser.stringId(),   displayName: randomUser.displayName(),    media: newMediaData)
                     
                 }
                 else {
                     /**
                     *  Last message was a text message
                     */
-                    newMessage = JSQMessage( senderId: randomUserId,   displayName:userDisplayedName,      text: copyMessage.text)
+                    newMessage = JSQMessage( senderId: randomUser.stringId(),   displayName:randomUser.displayName(),      text: copyMessage.text)
                 }
                 
                 
@@ -397,7 +398,7 @@ class DemoMessagesViewController : JSQMessagesViewController, UIActionSheetDeleg
         */
         let message : JSQMessage = self.demoData.messages[indexPath.item]
         
-        if message.senderId == self.senderId {
+        if message.senderId     == self.senderId {
             if !NSUserDefaults.outgoingAvatarSetting() {
                 return nil
             }
@@ -408,7 +409,7 @@ class DemoMessagesViewController : JSQMessagesViewController, UIActionSheetDeleg
         }
         
         
-        return self.demoData.avatars[message.senderId]
+        return self.demoData.avatars[ DemoUsersData(rawValue: message.senderId )! ]
     }
     
     
