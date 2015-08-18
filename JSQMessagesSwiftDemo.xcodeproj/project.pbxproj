@@ -14,6 +14,8 @@
 		64A4CD121B834652004A4AF5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64A4CD101B834652004A4AF5 /* LaunchScreen.xib */; };
 		64A4CD1E1B834652004A4AF5 /* JSQMessagesSwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A4CD1D1B834652004A4AF5 /* JSQMessagesSwiftDemoTests.swift */; };
 		64A4CD291B834F72004A4AF5 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A4CD281B834F72004A4AF5 /* TableViewController.m */; };
+		64A4CD2D1B83537F004A4AF5 /* DemoMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A4CD2C1B83537F004A4AF5 /* DemoMessagesViewController.swift */; };
+		64A4CD2F1B83825D004A4AF5 /* DemoModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A4CD2E1B83825D004A4AF5 /* DemoModelData.swift */; };
 		66C6FA5D383DCA13CC11F490 /* Pods_JSQMessagesSwiftDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F139CE5F01CAD8A1179CD155 /* Pods_JSQMessagesSwiftDemoTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D2824224785A72B8B10FEDDA /* Pods_JSQMessagesSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47535CDD4E891EE4B4575F9D /* Pods_JSQMessagesSwiftDemo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -47,6 +49,8 @@
 		64A4CD281B834F72004A4AF5 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		64A4CD2A1B834FB8004A4AF5 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		64A4CD2B1B835006004A4AF5 /* JSQDemoViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSQDemoViewControllerDelegate.h; sourceTree = "<group>"; };
+		64A4CD2C1B83537F004A4AF5 /* DemoMessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoMessagesViewController.swift; sourceTree = "<group>"; };
+		64A4CD2E1B83825D004A4AF5 /* DemoModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoModelData.swift; sourceTree = "<group>"; };
 		D7878618AD153317E9DA31A4 /* Pods-JSQMessagesSwiftDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSQMessagesSwiftDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JSQMessagesSwiftDemoTests/Pods-JSQMessagesSwiftDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F139CE5F01CAD8A1179CD155 /* Pods_JSQMessagesSwiftDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSQMessagesSwiftDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -94,6 +98,7 @@
 		64A4CCF91B834652004A4AF5 = {
 			isa = PBXGroup;
 			children = (
+				64A4CD2E1B83825D004A4AF5 /* DemoModelData.swift */,
 				64A4CD041B834652004A4AF5 /* JSQMessagesSwiftDemo */,
 				64A4CD1A1B834652004A4AF5 /* JSQMessagesSwiftDemoTests */,
 				64A4CD031B834652004A4AF5 /* Products */,
@@ -124,6 +129,7 @@
 				64A4CD271B834F72004A4AF5 /* JSQMessagesSwiftDemo-Bridging-Header.h */,
 				64A4CD2A1B834FB8004A4AF5 /* TableViewController.h */,
 				64A4CD2B1B835006004A4AF5 /* JSQDemoViewControllerDelegate.h */,
+				64A4CD2C1B83537F004A4AF5 /* DemoMessagesViewController.swift */,
 			);
 			path = JSQMessagesSwiftDemo;
 			sourceTree = "<group>";
@@ -352,8 +358,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64A4CD2F1B83825D004A4AF5 /* DemoModelData.swift in Sources */,
 				64A4CD0A1B834652004A4AF5 /* ViewController.swift in Sources */,
 				64A4CD291B834F72004A4AF5 /* TableViewController.m in Sources */,
+				64A4CD2D1B83537F004A4AF5 /* DemoMessagesViewController.swift in Sources */,
 				64A4CD081B834652004A4AF5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
