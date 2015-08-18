@@ -250,7 +250,7 @@ static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
 - (void)forwardInvocation:(NSInvocation *)anInvocation
 {
     if ([jsqMessagesCollectionViewCellActions containsObject:NSStringFromSelector(anInvocation.selector)]) {
-        __unsafe_unretained id sender;
+        id sender;
         [anInvocation getArgument:&sender atIndex:0];
         [self.delegate messagesCollectionViewCell:self didPerformAction:anInvocation.selector withSender:sender];
     }
